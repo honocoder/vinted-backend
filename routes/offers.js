@@ -1,6 +1,7 @@
 // Appel d'Express et initialisation des routers
 const express = require("express");
 const formidable = require("express-formidable");
+const cors = require("cors");
 const cloudinary = require("cloudinary").v2;
 const isAuthenticated = require("../middlewares/isAuthenticated");
 const router = express.Router();
@@ -11,6 +12,7 @@ const User = require("../models/User");
 
 // Route Publish
 router.post("/offer/publish", isAuthenticated, async (req, res) => {
+  app.use(cors());
   try {
     // Création d'une nouvelle Offer
     const newOffer = new Offer({
