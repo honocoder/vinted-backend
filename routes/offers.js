@@ -6,13 +6,14 @@ const cloudinary = require("cloudinary").v2;
 const isAuthenticated = require("../middlewares/isAuthenticated");
 const router = express.Router();
 
+app.use(cors());
+
 // Import des Models
 const Offer = require("../models/Offer");
 const User = require("../models/User");
 
 // Route Publish
 router.post("/offer/publish", isAuthenticated, async (req, res) => {
-  app.use(cors());
   try {
     // Création d'une nouvelle Offer
     const newOffer = new Offer({
