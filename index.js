@@ -33,7 +33,7 @@ const offerRoutes = require("./routes/offers");
 const paymentRoute = require("./routes/payment");
 app.use(userRoutes);
 app.use(offerRoutes);
-aoo.use(paymentRoute);
+app.use(paymentRoute);
 
 // Gestion des routes inexistantes
 app.all("*", (req, res) => {

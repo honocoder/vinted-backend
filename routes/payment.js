@@ -6,7 +6,7 @@ const router = express.Router();
 // Stripe call and config
 const stripe = require("stripe")(PROCESS.ENV.STRIPE_SECRET_KEY);
 
-app.post("/payment", cors(), async (req, res) => {
+app.post("/payment", async (req, res) => {
   console.log("Hello");
   try {
     // Receiving the token created in the front end by Stripe's API

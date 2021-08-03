@@ -10,7 +10,7 @@ const Offer = require("../models/Offer");
 const User = require("../models/User");
 
 // Route Publish
-router.post("/offer/publish", cors(), isAuthenticated, async (req, res) => {
+router.post("/offer/publish", isAuthenticated, async (req, res) => {
   try {
     // Création d'une nouvelle Offer
     const newOffer = new Offer({
