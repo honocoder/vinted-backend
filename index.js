@@ -30,8 +30,10 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Import des routes
 const userRoutes = require("./routes/users");
 const offerRoutes = require("./routes/offers");
+const paymentRoute = require("./routes/payment");
 app.use(userRoutes);
 app.use(offerRoutes);
+aoo.use(paymentRoute);
 
 // Gestion des routes inexistantes
 app.all("*", (req, res) => {
