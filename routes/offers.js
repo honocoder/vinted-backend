@@ -6,8 +6,6 @@ const cloudinary = require("cloudinary").v2;
 const isAuthenticated = require("../middlewares/isAuthenticated");
 const router = express.Router();
 
-app.use(cors());
-
 // Import des Models
 const Offer = require("../models/Offer");
 const User = require("../models/User");
