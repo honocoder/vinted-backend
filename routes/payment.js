@@ -20,8 +20,7 @@ router.post("/payment", async (req, res) => {
       amount: price * 100,
       currency: "eur",
       description: description,
-      title: title,
-      userToken: userToken,
+
       // Sending the token to Stripe
       source: stripeToken,
     });
