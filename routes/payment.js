@@ -14,6 +14,7 @@ router.post("/payment", async (req, res) => {
     const price = req.fields.price;
     const description = req.fields.description;
     const title = req.fields.title;
+    const userToken = req.fields.userToken;
     // Create the transaction
     const response = await stripe.charges.create({
       amount: price * 100,
