@@ -10,7 +10,7 @@ router.post("/payment", async (req, res) => {
   console.log("Hello");
   try {
     // Receiving the token created in the front end by Stripe's API
-    const stripeToken = req.fields.stripeResponse.token.id;
+    const stripeToken = req.fields.source;
     const price = req.fields.price;
     const description = req.fields.description;
     const title = req.fields.title;
